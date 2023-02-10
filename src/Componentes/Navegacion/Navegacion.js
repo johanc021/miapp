@@ -5,25 +5,27 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../Logo/logo.svg';
+import CartIcon from './CartIcon/CartIcon';
+import UserIcon from './UserIcon/UserIcon'
 
 
 const Navegacion = () => {
 	return <Navbar className='navegacion' collapseOnSelect expand="lg" bg="primary" variant="dark">
-				<Container>
+				<Container className='navContainer'>
 					<NavbarBrand>
 						<img
 							src={logo}
 							width="170"
-							height="65"
-							/* className="d-inline-block align-top"
-							alt="Tu imagen" */
+							height="30"
+							className="d-inline-block align-top"
+							alt="logo"
 						/>
 					</NavbarBrand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="me-auto">
-							<Nav.Link href="#features">Features</Nav.Link>
-							<Nav.Link href="#pricing">Pricing</Nav.Link>
+							<Nav.Link href="#libros">Libros</Nav.Link>
+							<Nav.Link href="#pricing">Vender Libros</Nav.Link>
 							<NavDropdown title="Dropdown" id="collasible-nav-dropdown">
 								<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
 								<NavDropdown.Item href="#action/3.2">
@@ -36,11 +38,13 @@ const Navegacion = () => {
 								</NavDropdown.Item>
 							</NavDropdown>
 						</Nav>
-						<Nav>
-							<Nav.Link href="#deets">More deets</Nav.Link>
-							<Nav.Link eventKey={2} href="#memes">
-								Dank memes
+						<Nav className='d-flex align-items-center'>
+							<Nav.Link href="#memes">
+								<CartIcon/>
 							</Nav.Link>
+							<Nav.Link href="#deets">
+								<UserIcon />
+							</Nav.Link>						
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
