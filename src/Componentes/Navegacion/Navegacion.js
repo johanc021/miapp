@@ -4,7 +4,7 @@ import NavbarBrand from 'react-bootstrap/esm/NavbarBrand';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../Logo/logo.svg';
+import logo from '../Logo/Recurso 2.svg';
 import CartIcon from './CartIcon/CartIcon';
 import UserIcon from './UserIcon/UserIcon'
 
@@ -43,7 +43,7 @@ const Navegacion = () => {
 								<CartIcon/>
 							</Nav.Link>
 							<Nav.Link href="#deets">
-								<UserIcon />
+								<UserIcon/>
 							</Nav.Link>						
 						</Nav>
 					</Navbar.Collapse>
